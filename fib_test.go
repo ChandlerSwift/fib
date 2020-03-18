@@ -31,3 +31,14 @@ func TestFib(t *testing.T) {
 		})
 	}
 }
+
+func BenchmarkFib(b *testing.B) {
+	cases := []int{10, 20, 30, 40, 42, 44, 45}
+	for _, c := range cases {
+		b.Run(fmt.Sprintf("%v", c), func (b *testing.B) {
+			for n := 0; n < b.N; n++ {
+				Fib(c)
+			}
+		})
+	}
+}
