@@ -1,3 +1,4 @@
+// Package fib provides a calculator for Fibonacci numbers.
 package fib
 
 // Fib calculates the n-th Fibonnaci number.
